@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Knowledge Decay Predictor
 
 An AI-powered web application that helps students track learning retention, predict forgetting patterns, and generate smart revision schedules.
@@ -36,3 +37,6 @@ python app.py
 
 NagaRaju Gedela
 B.Tech CSE (AI & ML)
+=======
+# knowledge-decay-predictor
+>>>>>>> f01046c358150fb3cee4c0548a99177bf0f024a8
