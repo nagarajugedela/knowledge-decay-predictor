@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Study Priority Ranking | Knowledge Decay Predictor</title>
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="dashboard-bg">
+
+<div class="container">
+
+    <div class="table-card">
+
+        <div class="text-center mb-5">
+
+            <h2 class="page-title">
+
+                AI Study Priority Ranking
+
+            </h2>
+
+            <p class="page-subtitle">
+
+                Topics ranked according to revision urgency
+
+            </p>
+
+        </div>
+
+        {% for topic in ranked_topics %}
+
+        <div class="priority-card mb-4">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-1">
+
+                    <div class="rank-badge">
+
+                        #{{ loop.index }}
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <h4>
+
+                        {{ topic.topic_name }}
+
+                    </h4>
+
+                </div>
+
+                <div class="col-md-3">
+
+                    <strong>
+
+                        Retention:
+
+                    </strong>
+
+                    {{ topic.retention }}%
+
+                </div>
+
+                <div class="col-md-4">
+
+                    {% if topic.retention < 40 %}
+
+                        <span class="badge bg-danger p-2">
+
+                            High Priority
+
+                        </span>
+
+                    {% elif topic.retention < 70 %}
+
+                        <span class="badge bg-warning text-dark p-2">
+
+                            Medium Priority
+
+                        </span>
+
+                    {% else %}
+
+                        <span class="badge bg-success p-2">
+
+                            Low Priority
+
+                        </span>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+        <div class="text-center mt-5">
+
+            <a
+            href="/dashboard"
+            class="btn btn-outline-primary btn-lg">
+
+                Return Dashboard
+
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

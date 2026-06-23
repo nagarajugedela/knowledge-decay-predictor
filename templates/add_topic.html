@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+
+{% block title %}
+Add Topic | Knowledge Decay Predictor
+{% endblock %}
+
+{% block content %}
+
+<div class="row justify-content-center">
+
+    <div class="col-lg-8">
+
+        <div class="form-card">
+
+            <div class="text-center mb-4">
+
+                <h2 class="fw-bold">
+                    Add Study Topic
+                </h2>
+
+                <p class="text-muted">
+                    Track learning sessions and improve retention using AI-powered analysis.
+                </p>
+
+            </div>
+
+            <form method="POST">
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Topic Name
+                    </label>
+
+                    <input
+                    type="text"
+                    name="topic_name"
+                    class="form-control"
+                    placeholder="Enter topic name"
+                    required>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Study Date
+                            </label>
+
+                            <input
+                            type="date"
+                            name="study_date"
+                            class="form-control"
+                            required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Study Duration (Hours)
+                            </label>
+
+                            <input
+                            type="number"
+                            step="0.1"
+                            name="study_duration"
+                            class="form-control"
+                            placeholder="Example: 2.5"
+                            required>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="mb-3">
+
+                    <label class="form-label">
+                        Difficulty Level
+                    </label>
+
+                    <select
+                    name="difficulty"
+                    class="form-select">
+
+                        <option>Easy</option>
+                        <option>Medium</option>
+                        <option>Hard</option>
+
+                    </select>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Confidence Score (1-10)
+                            </label>
+
+                            <input
+                            type="number"
+                            min="1"
+                            max="10"
+                            name="confidence_score"
+                            class="form-control"
+                            placeholder="Enter confidence level"
+                            required>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <div class="mb-3">
+
+                            <label class="form-label">
+                                Revision Count
+                            </label>
+
+                            <input
+                            type="number"
+                            min="0"
+                            value="0"
+                            name="revision_count"
+                            class="form-control"
+                            required>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="d-grid mt-4">
+
+                    <button
+                    type="submit"
+                    class="btn btn-primary btn-lg">
+
+                        Save Topic
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

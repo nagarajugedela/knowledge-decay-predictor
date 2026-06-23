@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Login | Knowledge Decay Predictor</title>
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet">
+
+    <link
+    rel="stylesheet"
+    href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body class="login-page">
+
+<div class="container">
+
+    <div class="row justify-content-center align-items-center vh-100">
+
+        <div class="col-md-5">
+
+            <div class="login-card">
+
+                <div class="text-center mb-4">
+
+                    <h1>🧠</h1>
+
+                    <h2>
+                        Knowledge Decay Predictor
+                    </h2>
+
+                    <p>
+                        AI Powered Learning Assistant
+                    </p>
+
+                </div>
+
+                <form method="POST">
+
+                    <div class="mb-3">
+
+                        <label>
+                            Email
+                        </label>
+
+                        <input
+                        type="email"
+                        name="email"
+                        class="form-control"
+                        required>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label>
+                            Password
+                        </label>
+
+                        <input
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        required>
+
+                    </div>
+
+                    <button
+                    class="btn btn-primary w-100">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <hr>
+
+                <p class="text-center">
+
+                    New User?
+
+                    <a href="/register">
+
+                        Register Here
+
+                    </a>
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

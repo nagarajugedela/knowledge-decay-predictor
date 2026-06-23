@@ -1,0 +1,213 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard | Knowledge Decay Predictor
+{% endblock %}
+
+{% block content %}
+
+<div class="text-center mb-5">
+
+    <h1 class="fw-bold">
+        Welcome, {{ name }}
+    </h1>
+
+    <p class="text-muted fs-5">
+        Monitor your learning progress, retention score,
+        and revision schedule in one place.
+    </p>
+
+</div>
+
+<div class="row g-4">
+
+    <div class="col-md-3">
+
+        <div class="card shadow-sm border-0 h-100">
+
+            <div class="card-body text-center">
+
+                <h6 class="text-muted">
+                    Total Topics
+                </h6>
+
+                <h1 class="fw-bold">
+                    {{ total_topics }}
+                </h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card shadow-sm border-0 h-100">
+
+            <div class="card-body text-center">
+
+                <h6 class="text-muted">
+                    Average Retention
+                </h6>
+
+                <h1 class="fw-bold">
+                    {{ average_retention }}%
+                </h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card shadow-sm border-0 h-100">
+
+            <div class="card-body text-center">
+
+                <h6 class="text-muted">
+                    High Risk Topics
+                </h6>
+
+                <h1 class="fw-bold">
+                    {{ high_risk }}
+                </h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+
+        <div class="card shadow-sm border-0 h-100">
+
+            <div class="card-body text-center">
+
+                <h6 class="text-muted">
+                    Need Revision
+                </h6>
+
+                <h1 class="fw-bold">
+                    {{ need_revision }}
+                </h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="card shadow-sm border-0 mt-5">
+
+    <div class="card-body p-5">
+
+        <h3 class="mb-3">
+            Knowledge Decay Predictor
+        </h3>
+
+        <p class="text-muted">
+
+            This AI-powered platform helps students
+            monitor knowledge retention, identify
+            weak topics, generate smart revision
+            schedules, predict forgetting patterns,
+            and improve long-term learning efficiency.
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="row mt-5 g-4">
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-body text-center">
+
+                <h5>
+                    Add New Topic
+                </h5>
+
+                <p class="text-muted">
+                    Track newly studied topics.
+                </p>
+
+                <a href="/add_topic"
+                   class="btn btn-primary">
+
+                    Add Topic
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-body text-center">
+
+                <h5>
+                    Analytics
+                </h5>
+
+                <p class="text-muted">
+                    Visualize retention performance.
+                </p>
+
+                <a href="/analytics"
+                   class="btn btn-primary">
+
+                    Open Analytics
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-body text-center">
+
+                <h5>
+                    Revision Scheduler
+                </h5>
+
+                <p class="text-muted">
+                    Generate smart revision plans.
+                </p>
+
+                <a href="/revision_schedule"
+                   class="btn btn-primary">
+
+                    Open Scheduler
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}
